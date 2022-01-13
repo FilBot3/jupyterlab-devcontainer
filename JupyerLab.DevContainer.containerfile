@@ -39,12 +39,12 @@ WORKDIR /home/developer
 
 # This makes the container an executable. If a shell session is desired, then
 # the user would need to override the entrypoint of the container.
-ENTRYPOINT ["/usr/local/bin/jupyter-lab"]
+ENTRYPOINT ["/usr/local/bin/jupyter"]
 
 # These can be overridden when the container is ran. These can also be defined
 # as part of the ENTRYPOINT, but I chose to put them in the CMD to also display
 # the capability.
-CMD ["--ip=0.0.0.0", "--no-browser"]
+CMD ["lab", "--ip=0.0.0.0", "--no-browser"]
 
 # This allows the user to run the container using predefined options.
 #
