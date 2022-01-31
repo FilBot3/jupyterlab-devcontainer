@@ -56,4 +56,4 @@ CMD ["lab", "--ip=0.0.0.0", "--no-browser"]
 # You can see the command being ran by using the --display flag before the image
 # name. Doing this won't actually run the container. Other labels can be
 # provided as well to provide different commands.
-LABEL RUN="podman run --rm --name jupyter-lab --publish 127.0.0.1:8888:8888 localhost/jupyterlab:latest"
+LABEL RUN="podman run --rm --name=\"jupyter-lab\" --hostname=\"jupyter-lab\" --userns=keep-id --mount=\"$(pwd):/home/developer/jupyer:Z\" --workdir=\"/home/developer/jupyter\" --publish=\"127.0.0.1:8888:8888\" localhost/jupyterlab:latest"
