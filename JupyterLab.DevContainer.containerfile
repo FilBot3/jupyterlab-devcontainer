@@ -12,6 +12,7 @@ FROM docker.io/library/python:bullseye
 RUN apt update && \
     apt install --yes \
       graphviz \
+      inkscape \
       pandoc \
       texlive-xetex \
       texlive-fonts-recommended \
